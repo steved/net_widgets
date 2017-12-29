@@ -143,7 +143,7 @@ function wireless:attach(widget, args)
     -- Bind onclick event function
     if onclick then
 	    widget:buttons(awful.util.table.join(
-	    awful.button({}, 1, function() awful.util.spawn(onclick) end)
+	    awful.button({}, 1, function() awful.spawn(onclick) end)
 	    ))
     end
     widget:connect_signal('mouse::enter', function () wireless:show(0) end)
